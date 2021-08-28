@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+    <title>Unidad 1</title>
+</head>
+<body>
+    
+    <main class="container-xl">
+        <header id="header" class="row">
+            <nav class="navbar navbar-expand-md navbar-light bg-info">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand ps-0" href="https://nanonodar.github.io/Curso-bootstrap-pruebas/">Seguro No Pagamos Cooperativa</a>
+                    <div class="justify-content-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <form class="row justify-content-center">
+                <span class="col-12 mt-0">
+                    <h2>Solicite su plan</h2>
+                </span>
+                    <span class="col-md-6">
+                        <input type="text" required placeholder="Nombre" id="nombre">
+                    </span>
+                    <span class="col-md-6">
+                        <input type="text" required placeholder="Apellido" id="apellido">
+                    </span>
+                <span class="col-md-6">
+                    <input type="number" required placeholder="DNI" id="dni">
+                </span>
+                <span class="col-md-6">
+                    <input type="email" required placeholder="Correo electronico" id="email">
+                </span>
+                <span class="col-md-6">
+                    <input type="number" required placeholder="Telefono" id="telefono">
+                </span>
+                <span class="col-md-6">
+                    <select class="form-select opcion-plan" aria-label="Default select example">
+                        <option selected value="0">Seleccione un plan</option>
+                        <option value="1">Basico</option>
+                        <option value="2">Intermedio</option>
+                        <option value="3">Premium</option>
+                      </select>
+                </span>
+                <div class="precio-seguro"></div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+                </div>
+            </form>
+            <div class="resultado"></div>
+            <script src="script.js"></script>
+    </main>
+</body>
+</html>
