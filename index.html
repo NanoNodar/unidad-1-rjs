@@ -9,8 +9,7 @@
     <title>Unidad 1</title>
 </head>
 <body>
-    
-    <main class="container-xl">
+    <main class="container-xl vh-100">
         <header id="header" class="row">
             <nav class="navbar navbar-expand-md navbar-light bg-info">
                 <div class="container-fluid px-0">
@@ -25,40 +24,47 @@
                 </div>
             </nav>
         </header>
-        <section>
-            <form class="row justify-content-center">
-                <span class="col-12 mt-0">
+        <section class="mw-100 mt-5">
+            <form class="row gy-2">
+                <div class="form-item-light col-12 mt-4 mb-2 justify-content-center">
                     <h2>Solicite su plan</h2>
-                </span>
-                    <span class="col-md-6">
-                        <input type="text" required placeholder="Nombre" id="nombre">
-                    </span>
-                    <span class="col-md-6">
-                        <input type="text" required placeholder="Apellido" id="apellido">
-                    </span>
-                <span class="col-md-6">
-                    <input type="number" required placeholder="DNI" id="dni">
-                </span>
-                <span class="col-md-6">
-                    <input type="email" required placeholder="Correo electronico" id="email">
-                </span>
-                <span class="col-md-6">
-                    <input type="number" required placeholder="Telefono" id="telefono">
-                </span>
-                <span class="col-md-6">
-                    <select class="form-select opcion-plan" aria-label="Default select example">
+                </div>
+                    <div class="col-md-6 form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" required placeholder="Nombre" id="nombre">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" required placeholder="Apellido" id="apellido">
+                    </div>
+                <div class="col-md-6 form-group">
+                    <label for="dni">DNI</label>
+                    <input type="number" class="form-control" required placeholder="DNI" id="dni">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" required placeholder="Correo electronico" id="email">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="number" class="form-control" required placeholder="Telefono" id="telefono">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="plan">Tipo de plan</label>
+                    <select class="form-select opcion-plan" id="id" aria-label="Default select example">
                         <option selected value="0">Seleccione un plan</option>
                         <option value="1">Basico</option>
                         <option value="2">Intermedio</option>
                         <option value="3">Premium</option>
                       </select>
-                </span>
-                <div class="precio-seguro"></div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
                 </div>
+                <div><h6 class="precio-seguro text-warning"></h6></div>
+                <div class="col-12 justify-content-center" style="display: flex;">
+                    <button type="submit" class="btn btn-dark" id="enviar">Enviar</button>
+                </div>
+                <div><h5 class="resultado"></h5></div>
             </form>
-            <div class="resultado"></div>
+            
             <script src="script.js"></script>
     </main>
 </body>

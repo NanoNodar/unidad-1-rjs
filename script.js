@@ -12,11 +12,11 @@ const mostrar = () => {
     let indice = select.selectedIndex;
     if(indice === -1) return;
     if(indice == 1){
-        resultadoPrecio.innerHTML = "500";
+        resultadoPrecio.innerHTML = "Este plan cuesta $500";
     }else if(indice == 2){
-        resultadoPrecio.innerHTML = "1000";
+        resultadoPrecio.innerHTML = "Este plan cuesta $1000";
     }else if(indice == 3){
-        resultadoPrecio.innerHTML = "1500";
+        resultadoPrecio.innerHTML = "Este plan cuesta $1500";
     }else if(indice == 0){
         resultadoPrecio.innerHTML = "Elija un plan";  
         }
@@ -35,6 +35,7 @@ const validarCampos = ()=>{
         telefono.value.length < 1){
         error[0] = true;
         error[1] = "Complete todos los datos";
+        return error;
     }else if (nombre.value.length > 40){
         error[0] = true;
         error[1] = "El nombre no puede tener mas de 40 caracteres";
@@ -77,11 +78,11 @@ boton.addEventListener("click",(e)=>{
     let error = validarCampos();
     if (error[0]){
         resultado.innerHTML = error[1];
-        resultado.classList.add("Danger");
-        resultado.classList.remove("Success");
-    } else {
+        resultado.classList.add("text-danger");
+        resultado.classList.remove("text-success");
+    }else{
         resultado.innerHTML = "Solicitud enviada correctamente";
-        resultado.classList.add("Success");
-        resultado.classList.remove("Danger");
+        resultado.classList.add("text-success");
+        resultado.classList.remove("text-danger");
     }
 })
